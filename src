@@ -1,0 +1,49 @@
+import pandas as pd
+import plotly.express as px
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Dados fornecidos
+municipios_emergencia_data = {
+    'Localidade': ['Amazonas', 'Canutama, Amazonas'],
+    'Número de Municípios em Emergência': [19, np.nan]  # Valor não especificado
+}
+
+municipios_seca_extrema_data = {
+    'Estado': ['São Paulo', 'Minas Gerais', 'Goiás', 'Mato Grosso do Sul', 'Mato Grosso'],
+    'Número de Municípios em Seca Extrema': [82, 52, 12, 8, 24]
+}
+
+impacto_seca_data = {
+    'Descrição': ['Número de grandes rios impactados pela seca', 'Área afetada pela seca no Brasil', 'Número de dias sem chuva em algumas cidades brasileiras', 'Percentual de redução no nível do Rio São Francisco', 'Número de usinas hidrelétricas afetadas', 'Número de hidrelétricas que dependem do Rio São Francisco'],
+    'Número': [12, 3_000_000, 100, 60, 9, 5]
+}
+
+# DataFrames
+df_emergencia = pd.DataFrame(municipios_emergencia_data)
+df_seca_extrema = pd.DataFrame(municipios_seca_extrema_data)
+df_impacto_seca = pd.DataFrame(impacto_seca_data)
+
+# Gráfico de Municípios em Emergência
+fig_emergencia = px.bar(df_emergencia, x='Localidade', y='Número de Municípios em Emergência',
+                       title='Número de Municípios em Emergência por Localidade',
+                       labels={'Número de Municípios em Emergência': 'Número de Municípios'})
+fig_emergencia.update_xaxes(title_text='Localidade')
+fig_emergencia.update_yaxes(title_text='Número de Municípios')
+fig_emergencia.show()
+
+# Gráfico de Municípios em Seca Extrema
+fig_seca_extrema = px.bar(df_seca_extrema, x='Estado', y='Número de Municípios em Seca Extrema',
+                         title='Número de Municípios em Seca Extrema por Estado',
+                         labels={'Número de Municípios em Seca Extrema': 'Número de Municípios'})
+fig_seca_extrema.update_xaxes(title_text='Estado')
+fig_seca_extrema.update_yaxes(title_text='Número de Municípios')
+fig_seca_extrema.show()
+
+# Gráfico de Impacto da Seca
+fig_impacto_seca = px.bar(df_impacto_seca, x='Descrição', y='Número',
+                         title='Impacto da Seca no Brasil',
+                         labels={'Número': 'Número ou Área'})
+fig_impacto_seca.update_xaxes(title_text='Descrição')
+fig_impacto_seca.update_yaxes(title_text='Número ou Área')
+fig_impacto_seca.show()
