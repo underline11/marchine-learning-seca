@@ -1,0 +1,22 @@
+import pandas as pd
+import plotly.express as px
+
+# Dados fictícios para o exemplo
+data = {
+    'Localidade': ['Local A', 'Local B', 'Local C'],
+    'Latitude': [-15.7801, -16.7801, -17.7801],
+    'Longitude': [-47.9292, -48.9292, -49.9292],
+    'População Afetada': [50000, 100000, 150000]
+}
+
+df = pd.DataFrame(data)
+
+# Criação do gráfico de dispersão interativo
+fig = px.scatter_geo(df, lat='Latitude', lon='Longitude', text='Localidade',
+                     size='População Afetada', title='Mapa Interativo com Plotly')
+
+# Atualizar a projeção do mapa
+fig.update_geos(projection_type="mercator")
+
+# Exibir o gráfico
+fig.show()
