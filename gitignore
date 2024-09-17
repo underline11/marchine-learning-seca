@@ -1,0 +1,64 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Virtualenv
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Data
+*.csv
+*.xlsx
+
+# Matplotlib
+*.png
+*.pdf
+*.svg
+*.eps
+
+# Plotly
+*.html
+
+# Compiled files
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+*.class
+
+# Misc
+.DS_Store
+*.swp
+*.swo
+
+# Files de backup do editor
+*~
+*.bak
+
+# Arquivos de configuração local
+*.local
+
+# Licença
+LICENSE
+
+# Arquivo de configurações de ambiente
+.env
