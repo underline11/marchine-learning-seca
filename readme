@@ -1,0 +1,58 @@
+# Análise e Avaliação dos Impactos da Seca no Brasil
+
+## Descrição do Projeto
+
+Este projeto visa analisar e visualizar os dados relacionados à seca no Brasil para entender a extensão e o impacto do problema em diferentes regiões e aspectos. A análise abrange três conjuntos principais de dados:
+
+1. **Número de Municípios em Emergência por Localidade**
+2. **Número de Municípios em Seca Extrema por Estado**
+3. **Impactos da Seca no Brasil**
+
+## Objetivos
+
+- Visualizar o número de municípios em emergência e seca extrema em diferentes localidades e estados.
+- Avaliar o impacto da seca em termos de grandes rios, áreas afetadas e infraestrutura energética.
+
+## Dados
+
+Os dados utilizados neste projeto foram organizados em três conjuntos:
+
+1. **Municípios em Emergência:**
+   - `Localidade`: Localidade afetada pela seca.
+   - `Número de Municípios em Emergência`: Quantidade de municípios em emergência devido à seca.
+
+2. **Municípios em Seca Extrema:**
+   - `Estado`: Estado do Brasil.
+   - `Número de Municípios em Seca Extrema`: Quantidade de municípios em seca extrema.
+
+3. **Impacto da Seca:**
+   - `Descrição`: Tipo de impacto causado pela seca.
+   - `Número`: Medida do impacto (ex.: área afetada, número de rios).
+
+## Visualizações
+
+1. **Número de Municípios em Emergência por Localidade:**
+   - Gráfico de barras mostrando o número de municípios em emergência devido à seca em diferentes localidades.
+
+2. **Número de Municípios em Seca Extrema por Estado:**
+   - Gráfico de barras mostrando a quantidade de municípios em seca extrema em cada estado do Brasil.
+
+3. **Impacto da Seca no Brasil:**
+   - Gráfico de barras detalhando diferentes aspectos do impacto da seca, como o número de grandes rios afetados, área afetada e impacto nas hidrelétricas.
+
+## Tecnologias Utilizadas
+
+- **Python**: Linguagem de programação para análise e visualização.
+- **Pandas**: Manipulação e análise de dados.
+- **Plotly Express**: Criação de gráficos interativos.
+- **Matplotlib**: (Caso necessário) Criação de gráficos estáticos.
+- **NumPy**: Manipulação de arrays e valores numéricos.
+
+## Como Executar
+
+1. **Instalação das Dependências:**
+
+   Certifique-se de ter o Python instalado. Em seguida, instale as dependências necessárias usando o `pip`:
+
+   
+   pip install pandas plotly matplotlib numpy
